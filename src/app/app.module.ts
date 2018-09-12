@@ -11,7 +11,10 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 
-const routs = [];
+const routes = [
+  { path: 'register', component: RegistrationComponent },
+  { path: '**', component: RegistrationComponent }
+];
 
 @NgModule({
   declarations: [
@@ -23,7 +26,7 @@ const routs = [];
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    RouterModule,
+    RouterModule.forRoot(routes),
     ReactiveFormsModule,
     MatToolbarModule,
     MatButtonModule,
