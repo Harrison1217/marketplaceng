@@ -13,6 +13,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { AuthService } from './services/auth.service';
 import { LoginComponent } from './components/login/login.component';
+import { CustomersService } from './services/customers.service';
 
 const routes = [
   { path: 'register', component: RegistrationComponent },
@@ -40,7 +41,8 @@ const routes = [
     MatInputModule
   ],
   providers: [
-    AuthService
+    AuthService,
+    CustomersService
   ],
   bootstrap: [AppComponent]
 })
