@@ -26,6 +26,7 @@ const routes = [
   { path: 'login', component: LoginComponent },
   { path: 'products', component: ProductIndexComponent },
   { path: 'customers', component: CustomerIndexComponent },
+  { path: 'transactions', component: TransactionIndexComponent },
   { path: '**', component: RegistrationComponent }
 ];
 
