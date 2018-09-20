@@ -18,6 +18,8 @@ import { CustomersService } from './services/customers.service';
 import { TransactionsService } from './services/transactions.service';
 import { TransactionIndexComponent } from './components/transaction/transaction-index/transaction-index.component';
 import { CustomerIndexComponent } from './components/customer/customer-index/customer-index.component';
+import { RetailerComponent } from './components/retailer/retailer.component';
+import { RetailersService } from './services/retailer.service';
 
 
 const routes = [
@@ -33,8 +35,9 @@ const routes = [
     HeaderComponent,
     RegistrationComponent,
     LoginComponent,
-    TransactionIndexComponent
-    CustomerIndexComponent
+    TransactionIndexComponent,
+    CustomerIndexComponent,
+    RetailerComponent
   ],
   imports: [
     BrowserModule,
