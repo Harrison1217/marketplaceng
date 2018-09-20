@@ -50,12 +50,8 @@ const routes = [
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-<<<<<<< HEAD
-    MatTableModule
-=======
     MatTableModule,
     MatSelectModule
->>>>>>> 01afd375342ffdf2de1c47edd7be6a1ed541247b
   ],
   providers: [
     AuthService,
