@@ -15,14 +15,16 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { AuthService } from './services/auth.service';
 import { LoginComponent } from './components/login/login.component';
 import { CustomersService } from './services/customers.service';
+import { ProductsService } from './services/products.service';
+import { ProductIndexComponent } from './components/product/product-index/product-index.component';
 import { TransactionsService } from './services/transactions.service';
 import { TransactionIndexComponent } from './components/transaction/transaction-index/transaction-index.component';
 import { CustomerIndexComponent } from './components/customer/customer-index/customer-index.component';
 
-
 const routes = [
   { path: 'register', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'products', component: ProductIndexComponent },
   { path: 'customers', component: CustomerIndexComponent },
   { path: '**', component: RegistrationComponent }
 ];
@@ -33,7 +35,8 @@ const routes = [
     HeaderComponent,
     RegistrationComponent,
     LoginComponent,
-    TransactionIndexComponent
+    ProductIndexComponent,
+    TransactionIndexComponent,
     CustomerIndexComponent
   ],
   imports: [
@@ -52,6 +55,8 @@ const routes = [
   ],
   providers: [
     AuthService,
+    CustomersService, 
+    ProductsService,
     CustomersService,
     TransactionsService
   ],
