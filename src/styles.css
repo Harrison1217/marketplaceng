@@ -6,3 +6,7 @@ body, html {
     padding: 0;
     font-family: 'Roboto', 'Arial', sans-serif;
 }
+
+.mat-radio-button ~ .mat-radio-button {
+    padding-right: 16px;
+}
