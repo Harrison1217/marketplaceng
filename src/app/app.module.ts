@@ -15,7 +15,10 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { AuthService } from './services/auth.service';
 import { LoginComponent } from './components/login/login.component';
 import { CustomersService } from './services/customers.service';
+import { TransactionsService } from './services/transactions.service';
+import { TransactionIndexComponent } from './components/transaction/transaction-index/transaction-index.component';
 import { CustomerIndexComponent } from './components/customer/customer-index/customer-index.component';
+
 
 const routes = [
   { path: 'register', component: RegistrationComponent },
@@ -30,6 +33,7 @@ const routes = [
     HeaderComponent,
     RegistrationComponent,
     LoginComponent,
+    TransactionIndexComponent
     CustomerIndexComponent
   ],
   imports: [
@@ -48,7 +52,8 @@ const routes = [
   ],
   providers: [
     AuthService,
-    CustomersService
+    CustomersService,
+    TransactionsService
   ],
   bootstrap: [AppComponent]
 })
