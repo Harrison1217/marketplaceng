@@ -24,6 +24,7 @@ const routes = [
   { path: 'register', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
   { path: 'customers', component: CustomerIndexComponent },
+  { path: 'transactions', component: TransactionIndexComponent },
   { path: '**', component: RegistrationComponent }
 ];
 
