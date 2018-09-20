@@ -4,8 +4,9 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatTableModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
 
 
 import { AppComponent } from './app.component';
@@ -14,10 +15,12 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { AuthService } from './services/auth.service';
 import { LoginComponent } from './components/login/login.component';
 import { CustomersService } from './services/customers.service';
+import { CustomerIndexComponent } from './components/customer/customer-index/customer-index.component';
 
 const routes = [
   { path: 'register', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'customers', component: CustomerIndexComponent },
   { path: '**', component: RegistrationComponent }
 ];
 
@@ -26,7 +29,8 @@ const routes = [
     AppComponent,
     HeaderComponent,
     RegistrationComponent,
-    LoginComponent
+    LoginComponent,
+    CustomerIndexComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +42,9 @@ const routes = [
     MatToolbarModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule,
+    MatSelectModule
   ],
   providers: [
     AuthService,
