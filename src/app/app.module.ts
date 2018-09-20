@@ -4,8 +4,9 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatTableModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
 
 
 import { AppComponent } from './app.component';
@@ -16,11 +17,15 @@ import { LoginComponent } from './components/login/login.component';
 import { CustomersService } from './services/customers.service';
 import { ProductsService } from './services/products.service';
 import { ProductIndexComponent } from './components/product/product-index/product-index.component';
+import { TransactionsService } from './services/transactions.service';
+import { TransactionIndexComponent } from './components/transaction/transaction-index/transaction-index.component';
+import { CustomerIndexComponent } from './components/customer/customer-index/customer-index.component';
 
 const routes = [
   { path: 'register', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
   { path: 'products', component: ProductIndexComponent },
+  { path: 'customers', component: CustomerIndexComponent },
   { path: '**', component: RegistrationComponent }
 ];
 
@@ -30,7 +35,9 @@ const routes = [
     HeaderComponent,
     RegistrationComponent,
     LoginComponent,
-    ProductIndexComponent
+    ProductIndexComponent,
+    TransactionIndexComponent,
+    CustomerIndexComponent
   ],
   imports: [
     BrowserModule,
@@ -42,12 +49,16 @@ const routes = [
     MatToolbarModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule,
+    MatSelectModule
   ],
   providers: [
     AuthService,
     CustomersService, 
-    ProductsService
+    ProductsService,
+    CustomersService,
+    TransactionsService
   ],
   bootstrap: [AppComponent]
 })

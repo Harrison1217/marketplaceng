@@ -1,0 +1,55 @@
+<h1>Customers</h1>
+<a mat-raised-button color="primary">Create New</a>
+<hr>
+
+<div>
+  <mat-table #table [dataSource]="dataSource">
+    <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
+
+    <ng-container matColumnDef="CustomerId">
+      <mat-header-cell *matHeaderCellDef> Customer # </mat-header-cell>
+      <mat-cell *matCellDef="let customer"> {{ customer.CustomerId }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="First Name">
+      <mat-header-cell *matHeaderCellDef> First Name </mat-header-cell>
+      <mat-cell *matCellDef="let customer"> {{ customer.CustomerFirstName }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Last Name">
+      <mat-header-cell *matHeaderCellDef> Last Name </mat-header-cell>
+      <mat-cell *matCellDef="let customer"> {{ customer.CustomerLastName }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Phone">
+      <mat-header-cell *matHeaderCellDef> Phone </mat-header-cell>
+      <mat-cell *matCellDef="let customer"> {{ customer.CustomerPhone }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Email">
+      <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
+      <mat-cell *matCellDef="let customer"> {{ customer.CustomerEmail }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Street">
+      <mat-header-cell *matHeaderCellDef> Street </mat-header-cell>
+      <mat-cell *matCellDef="let customer"> {{ customer.CustomerStreetAddress }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="State">
+      <mat-header-cell *matHeaderCellDef> State </mat-header-cell>
+      <mat-cell *matCellDef="let customer"> {{ customer.State }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="City">
+      <mat-header-cell *matHeaderCellDef> City </mat-header-cell>
+      <mat-cell *matCellDef="let customer"> {{ customer.City }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Zip">
+      <mat-header-cell *matHeaderCellDef> Zip </mat-header-cell>
+      <mat-cell *matCellDef="let customer"> {{ customer.Zip }} </mat-cell>
+    </ng-container>
+  </mat-table>
+</div>

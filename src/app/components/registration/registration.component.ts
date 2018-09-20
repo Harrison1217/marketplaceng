@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
+import { Role } from '../../models/Role';
 
 @Component({
   selector: 'app-registration',
@@ -12,6 +13,13 @@ export class RegistrationComponent implements OnInit {
 
   private _registerForm: FormGroup;
 
+  selectedValue: string;
+
+  roles: Role[] = [
+    { role: 'Customer' },
+    { role: 'Retailer' }
+  ];
+
   constructor(private _form: FormBuilder, private _authService: AuthService) { }
 
   ngOnInit() {
@@ -22,7 +30,8 @@ export class RegistrationComponent implements OnInit {
     this._registerForm = this._form.group({
       email: new FormControl,
       password: new FormControl,
-      confirmPassword: new FormControl
+      confirmPassword: new FormControl,
+      role: new FormControl
     });
   }
 
