@@ -5,7 +5,7 @@ import { Token } from '../models/Token';
 import { Router } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
 
-const Api_Url = 'https://kcpelevennote.azurewebsites.net';
+const Api_Url = 'https://efamarketplaceapi.azurewebsites.net';
 
 @Injectable({
   providedIn: 'root'
@@ -51,3 +51,4 @@ export class AuthService {
     return new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('id_token')}`);
   }
 }
+

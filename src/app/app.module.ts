@@ -14,10 +14,13 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { AuthService } from './services/auth.service';
 import { LoginComponent } from './components/login/login.component';
 import { CustomersService } from './services/customers.service';
+import { ProductsService } from './services/products.service';
+import { ProductIndexComponent } from './components/product/product-index/product-index.component';
 
 const routes = [
   { path: 'register', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'products', component: ProductIndexComponent },
   { path: '**', component: RegistrationComponent }
 ];
 
@@ -26,7 +29,8 @@ const routes = [
     AppComponent,
     HeaderComponent,
     RegistrationComponent,
-    LoginComponent
+    LoginComponent,
+    ProductIndexComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +46,8 @@ const routes = [
   ],
   providers: [
     AuthService,
-    CustomersService
+    CustomersService, 
+    ProductsService
   ],
   bootstrap: [AppComponent]
 })
