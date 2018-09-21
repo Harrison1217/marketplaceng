@@ -1,3 +1,34 @@
-<p>
-  retailer works!
-</p>
+<h1>Retailer</h1>
+<a mat-raised-button color="primary">Create New</a>
+<hr>
+<div>
+  <mat-table #table [dataSource]="dataSource">
+    <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
+
+    <ng-container matColumnDef="RetailerId">
+      <mat-header-cell *matHeaderCellDef> Retailer # </mat-header-cell>
+      <mat-cell *matCellDef="let customer"> {{ retailer.Retailer }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="RetailerName">
+      <mat-header-cell *matHeaderCellDef> Retailer Name </mat-header-cell>
+      <mat-cell *matCellDef="let customer"> {{ retailer.RetailerName }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="RetailerEin">
+      <mat-header-cell *matHeaderCellDef> RetailerEin </mat-header-cell>
+      <mat-cell *matCellDef="let customer"> {{ retailer.RetailerEin }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="RetailerPhone">
+      <mat-header-cell *matHeaderCellDef> RetailerPhone </mat-header-cell>
+      <mat-cell *matCellDef="let customer"> {{ retailer.RetailerPhone }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="RetailerEmail">
+      <mat-header-cell *matHeaderCellDef> RetilerEmail </mat-header-cell>
+      <mat-cell *matCellDef="let customer"> {{ retailer.RetailerEmail }} </mat-cell>
+    </ng-container>
+  </mat-table>
+</div>

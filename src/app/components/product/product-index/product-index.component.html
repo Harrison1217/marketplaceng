@@ -1,0 +1,15 @@
+<h1>Index</h1>
+<a mat-raised-button color="primary">Create New</a>
+<hr>
+
+<div>
+  <table mat-table [dataSource]="dataSource">
+  <tr mat-row *matRowDef="let row; columns: columnsNames;"></tr>
+
+  <ng-container matColumnDef="ProductId">
+    <th mat-header-cell *matHeaderCellDef> Product # </th>
+    <td mat-cell *matcellDef="let note"> {{note.NoteId}} </td>
+  </ng-container>
+
+</table>
+</div>
