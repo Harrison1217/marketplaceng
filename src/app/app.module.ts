@@ -20,6 +20,8 @@ import { ProductIndexComponent } from './components/product/product-index/produc
 import { TransactionsService } from './services/transactions.service';
 import { TransactionIndexComponent } from './components/transaction/transaction-index/transaction-index.component';
 import { CustomerIndexComponent } from './components/customer/customer-index/customer-index.component';
+import { RetailerComponent } from './components/retailer/retailer.component';
+import { RetailersService } from './services/retailer.service';
 
 const routes = [
   { path: 'register', component: RegistrationComponent },
