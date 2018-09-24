@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Product } from '../models/Product';
 
-const ApiUrl = 'http://efamarketplaceapi.azurewebsited.net/api';
+const ApiUrl = 'https://efamarketplacewebapi.azurewebsites.net/api';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,7 @@ export class ProductsService {
   constructor(private _http: HttpClient) { }
   
   getProducts(){
-    return this._http.get('${ApiUrl}/Products', { headers: this.getHeaders() });
+    return this._http.get(`${ApiUrl}/Product`, { headers: this.getHeaders() });
   }
 
   private getHeaders() {
@@ -20,7 +20,11 @@ export class ProductsService {
   }
 
   createProduct(product: Product) {
-    return this._http.post(`${ApiUrl}/Products`, product, { headers: this.getHeaders()});
+    return this._http.post(`${ApiUrl}/Product`, product, { headers: this.getHeaders()});
+  }
+
+  getProduct(id: string) {
+    return this._http.get(`&{ApiUrl}/Product/${id}`, { headers: this.getHeaders() });
   }
 }
 

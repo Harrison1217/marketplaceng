@@ -3,9 +3,9 @@ export interface Product {
     ProductName: string;
     ProductUpc?: number;
     ProductPrice?: number;
-    ProductCost?: number;
-    ProductProfit?: number;
-    ProductOnSale?: boolean;
+    //ProductCost?: number;
+    //ProductProfit?: number;
+    //ProductOnSale?: boolean;
     ProductCategory: string;
     ProductDescription: string;
     RetailerId?: number;

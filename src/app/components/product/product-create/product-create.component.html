@@ -1,11 +1,11 @@
 <h1>Create a Note.</h1>
 <hr>
 
-<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="noteForm">
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="productForm">
   <div>
     <div>
       <mat-form-field>
-        <input matInput placeholder="Product Name" formControlName="ProductName" type="ProductName" required/>
+        <input matInput placeholder="Product Name" formControlName="ProductName" type="ProductName"/>
       </mat-form-field>
     </div>
     <div>
@@ -18,7 +18,7 @@
         <input matInput placeholder="ProductPrice" formControlName="ProductPrice" type="ProductPrice" required/>
       </mat-form-field>
     </div>
-    <div>
+    <!-- <div>
       <mat-form-field>
         <input matInput placeholder="ProductCost" formControlName="ProductCost" type="ProductCost" required/>
       </mat-form-field>
@@ -27,12 +27,12 @@
       <mat-form-field>
         <input matInput placeholder="ProductProfit" formControlName="ProductProfit" type="ProductProfit" required/>
       </mat-form-field>
-    </div>
-    <div>
+    </div> -->
+    <!-- <div>
       <mat-form-field>
         <input matInput placeholder="ProductOnSale" formControlName="ProductOnSale" type="ProductOnSale" required/>
       </mat-form-field>
-    </div>
+    </div> -->
     <div>
       <mat-form-field>
         <input matInput placeholder="ProductCategory" formControlName="ProductCategory" type="ProductCategory" required/>

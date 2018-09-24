@@ -25,18 +25,20 @@ import { RetailersService } from './services/retailer.service';
 import { CustomerCreateComponent } from './components/customer/customer-create/customer-create.component';
 import { RetailerCreateComponent } from './components/retailer/retailer-create/retailer-create.component';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
+import { ProductDetailComponent } from './components/product/product-detail/product-detail.component';
 import { TransactionDetailComponent } from './components/transaction/transaction-detail/transaction-detail.component';
 
 const routes = [
   { path: 'register', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'products', component: ProductIndexComponent },
   {
-    path: 'customer', children: [
-      { path: '', component: CustomerIndexComponent },
-      { path: 'create', component: CustomerCreateComponent }
+    path: 'product', children: [
+      { path: '', component: ProductIndexComponent },
+      { path: 'create', component: ProductCreateComponent },
     ]
   },
+  { path: 'customers', component: CustomerIndexComponent },
+
   { path: 'transactions', component: TransactionIndexComponent },
   {path: 'retailer/create', component: RetailerComponent},
   {
@@ -47,6 +49,7 @@ const routes = [
     ]
   },
   { path: '**', component: RegistrationComponent }
+
 ];
 
 @NgModule({
@@ -58,10 +61,11 @@ const routes = [
     ProductIndexComponent,
     TransactionIndexComponent,
     CustomerIndexComponent,
+    ProductCreateComponent,
+    ProductDetailComponent,
     CustomerCreateComponent
     RetailerCreateComponent,
     RetailerComponent,
-    ProductCreateComponent,
     TransactionDetailComponent
   ],
   imports: [
