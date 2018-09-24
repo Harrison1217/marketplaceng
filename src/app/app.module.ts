@@ -63,7 +63,7 @@ const routes = [
     CustomerIndexComponent,
     ProductCreateComponent,
     ProductDetailComponent,
-    CustomerCreateComponent
+    CustomerCreateComponent,
     RetailerCreateComponent,
     RetailerComponent,
     TransactionDetailComponent
