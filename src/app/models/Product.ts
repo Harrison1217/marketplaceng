@@ -8,6 +8,6 @@ export interface Product {
     ProductOnSale?: boolean;
     ProductCategory: string;
     ProductDescription: string;
-    //RetailerId?: number;
+    RetailerId?: number;
     
 }

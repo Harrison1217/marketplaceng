@@ -22,6 +22,7 @@ import { TransactionIndexComponent } from './components/transaction/transaction-
 import { CustomerIndexComponent } from './components/customer/customer-index/customer-index.component';
 import { RetailerComponent } from './components/retailer/retailer.component';
 import { RetailersService } from './services/retailer.service';
+import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 
 const routes = [
   { path: 'register', component: RegistrationComponent },
@@ -40,7 +41,8 @@ const routes = [
     LoginComponent,
     ProductIndexComponent,
     TransactionIndexComponent,
-    CustomerIndexComponent
+    CustomerIndexComponent,
+    ProductCreateComponent
   ],
   imports: [
     BrowserModule,
