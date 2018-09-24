@@ -11,9 +11,8 @@ import { MatTableDataSource } from '@angular/material';
 export class ProductIndexComponent implements OnInit {
 
   constructor(private _productService: ProductsService) { }
-  columnNames= ['ProductId'];
-//   columnNames = ['ProductId','ProductName', 'ProductUpc', 'ProductPrice','ProductCost',
-//  'ProductProfit', 'ProductOnSale', 'ProductCategory', 'ProductDescription'];
+  
+   columnNames = ['ProductId', 'ProductName', 'ProductUpc', 'ProductPrice', 'ProductCategory', 'ProductDescription'];
   dataSource: MatTableDataSource<Product>
   ngOnInit() {
     this._productService.getProducts().subscribe((products: Product[]) => {

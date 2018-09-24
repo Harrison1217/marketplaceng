@@ -26,18 +26,18 @@ export class ProductCreateComponent implements OnInit {
       ProductName: new FormControl,
       ProductUpc: new FormControl,
       ProductPrice: new FormControl,
-      ProductCost: new FormControl,
-      ProductProfit: new FormControl,
-      ProductOnSale: new FormControl,
+      // ProductCost: new FormControl,
+      // ProductProfit: new FormControl,
+      // ProductOnSale: new FormControl,
       ProductCategory: new FormControl,
       ProductDescription: new FormControl,
-      //RetailerId: new FormControl
+      RetailerId: new FormControl
     });
   }
 
   onSubmit() {
     this._productService.createProduct(this.productForm.value).subscribe(data => {
-      this._router.navigate(['/products']);
+      this._router.navigate(['/product']);
     })
   }
 }
