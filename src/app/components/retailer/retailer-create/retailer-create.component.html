@@ -1,0 +1,35 @@
+<h1>Create a Retailer.</h1>
+<hr>
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="retailerForm">
+  <div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Retailer Name" formControlName="Retailer Name" type="Retailer Name" required/>
+      </mat-form-field>
+    </div>
+  <div>
+      <mat-form-field>
+        <input matInput placeholder="Retailer Ein" formControlName="Retailer Ein" type="Retailer Ein" required/>
+      </mat-form-field>
+    </div>
+  <div>
+  <mat-form-field>
+    <input matInput placeholder="Retailer Address" formControlName="Retailer Address" type="Retailer Address" required/>
+  </mat-form-field>
+</div>
+<div>
+<mat-form-field>
+  <input matInput placeholder="Retailer Email" formControlName="Retailer Email" type="Retailer Email" required/>
+</mat-form-field>
+</div>
+<div>
+<mat-form-field>
+  <input matInput placeholder="Retailer Phone" formControlName="Retailer Phone" type="Retailer Phone" required/>
+</mat-form-field>
+</div>
+</div>
+  <button mat-raised-button class="nav-btn" color="primary" type="submit">Create Retailer</button>
+</form>
+
+<a mat-button routerLink="/Retailer">Back to List</a>
