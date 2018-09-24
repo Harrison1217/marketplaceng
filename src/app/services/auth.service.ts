@@ -5,9 +5,7 @@ import { Token } from '../models/Token';
 import { Router } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
 
-
-const Api_Url = 'https://efamarketplacewebapi.azurewebsites.net/';
-
+const Api_Url = 'https://efamarketplacewebapi.azurewebsites.net';
 
 @Injectable({
   providedIn: 'root'
