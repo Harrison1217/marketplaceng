@@ -22,8 +22,11 @@ import { TransactionIndexComponent } from './components/transaction/transaction-
 import { CustomerIndexComponent } from './components/customer/customer-index/customer-index.component';
 import { RetailerComponent } from './components/retailer/retailer.component';
 import { RetailersService } from './services/retailer.service';
+import { CustomerCreateComponent } from './components/customer/customer-create/customer-create.component';
+import { RetailerCreateComponent } from './components/retailer/retailer-create/retailer-create.component';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 import { ProductDetailComponent } from './components/product/product-detail/product-detail.component';
+import { TransactionDetailComponent } from './components/transaction/transaction-detail/transaction-detail.component';
 
 const routes = [
   { path: 'register', component: RegistrationComponent },
@@ -35,7 +38,16 @@ const routes = [
     ]
   },
   { path: 'customers', component: CustomerIndexComponent },
+
   { path: 'transactions', component: TransactionIndexComponent },
+  {path: 'retailer/create', component: RetailerComponent},
+  {
+    path: 'transactions', children: [
+      { path: '', component: TransactionIndexComponent },
+      { path: 'create', component: TransactionIndexComponent },
+      { path: 'detail/:id', component: TransactionDetailComponent }
+    ]
+  },
   { path: '**', component: RegistrationComponent }
 
 ];
@@ -50,7 +62,11 @@ const routes = [
     TransactionIndexComponent,
     CustomerIndexComponent,
     ProductCreateComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    CustomerCreateComponent
+    RetailerCreateComponent,
+    RetailerComponent,
+    TransactionDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -71,7 +87,8 @@ const routes = [
     CustomersService,
     ProductsService,
     CustomersService,
-    TransactionsService
+    TransactionsService,
+    RetailersService
   ],
   bootstrap: [AppComponent]
 })

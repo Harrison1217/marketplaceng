@@ -21,5 +21,4 @@ export class CustomerIndexComponent implements OnInit {
       this.dataSource = new MatTableDataSource<Customer>(customers);
     });
   }
-
 }
