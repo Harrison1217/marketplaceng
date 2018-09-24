@@ -22,15 +22,17 @@ import { TransactionIndexComponent } from './components/transaction/transaction-
 import { CustomerIndexComponent } from './components/customer/customer-index/customer-index.component';
 import { RetailerComponent } from './components/retailer/retailer.component';
 import { RetailersService } from './services/retailer.service';
+import { RetailerCreateComponent } from './components/retailer/retailer-create/retailer-create.component';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 import { TransactionDetailComponent } from './components/transaction/transaction-detail/transaction-detail.component';
-
 
 const routes = [
   { path: 'register', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
   { path: 'products', component: ProductIndexComponent },
   { path: 'customers', component: CustomerIndexComponent },
+  { path: 'transactions', component: TransactionIndexComponent },
+  {path: 'retailer/create', component: RetailerComponent},
   {
     path: 'transactions', children: [
       { path: '', component: TransactionIndexComponent },
@@ -50,6 +52,8 @@ const routes = [
     ProductIndexComponent,
     TransactionIndexComponent,
     CustomerIndexComponent,
+    RetailerCreateComponent,
+    RetailerComponent,
     ProductCreateComponent,
     TransactionDetailComponent
   ],
@@ -72,7 +76,8 @@ const routes = [
     CustomersService, 
     ProductsService,
     CustomersService,
-    TransactionsService
+    TransactionsService,
+    RetailersService
   ],
   bootstrap: [AppComponent]
 })

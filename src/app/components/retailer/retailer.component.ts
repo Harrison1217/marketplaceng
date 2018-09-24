@@ -5,13 +5,13 @@ import { MatTableDataSource } from '@angular/material';
 
 @Component({
   selector: 'app-retailer-index',
-  templateUrl: './retailer-index.component.html',
-  styleUrls: ['./retailer-index.component.css']
+  templateUrl: './retailer.component.html',
+  styleUrls: ['./retailer.component.css']
 })
 
 export class RetailerComponent implements OnInit {
 
-  columnNames = ['RetailerId', 'RetailerName', 'RetailerEin', 'RetailerAddress', 'RetailerEmail', 'RetailerPhone', 'Image'];
+  columnNames = ['RetailerId', 'RetailerName', 'RetailerEin', 'RetailerAddress', 'RetailerEmail', 'RetailerPhone',];
   dataSource: MatTableDataSource<Retailer>;
 
   constructor(private _retailerService: RetailersService) { }
