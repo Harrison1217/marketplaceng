@@ -22,12 +22,18 @@ import { TransactionIndexComponent } from './components/transaction/transaction-
 import { CustomerIndexComponent } from './components/customer/customer-index/customer-index.component';
 import { RetailerComponent } from './components/retailer/retailer.component';
 import { RetailersService } from './services/retailer.service';
+import { CustomerCreateComponent } from './components/customer/customer-create/customer-create.component';
 
 const routes = [
   { path: 'register', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
   { path: 'products', component: ProductIndexComponent },
-  { path: 'customers', component: CustomerIndexComponent },
+  {
+    path: 'customer', children: [
+      { path: '', component: CustomerIndexComponent },
+      { path: 'create', component: CustomerCreateComponent }
+    ]
+  },
   { path: 'transactions', component: TransactionIndexComponent },
   { path: '**', component: RegistrationComponent }
 ];
@@ -40,7 +46,8 @@ const routes = [
     LoginComponent,
     ProductIndexComponent,
     TransactionIndexComponent,
-    CustomerIndexComponent
+    CustomerIndexComponent,
+    CustomerCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +65,7 @@ const routes = [
   ],
   providers: [
     AuthService,
-    CustomersService, 
+    CustomersService,
     ProductsService,
     CustomersService,
     TransactionsService
