@@ -7,8 +7,8 @@
     <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
 
     <ng-container matColumnDef="RetailerId">
-      <mat-header-cell *matHeaderCellDef> Retailer # </mat-header-cell>
-      <mat-cell *matCellDef="let customer"> {{ retailer.Retailer }} </mat-cell>
+      <th mat-header-cell *matHeaderCellDef> Retailer # </th>
+      <td mat-cell *matCellDef="let customer"> {{ retailer.Retailerid }} </td>
     </ng-container>
 
     <ng-container matColumnDef="RetailerName">
@@ -24,6 +24,11 @@
     <ng-container matColumnDef="RetailerPhone">
       <mat-header-cell *matHeaderCellDef> RetailerPhone </mat-header-cell>
       <mat-cell *matCellDef="let customer"> {{ retailer.RetailerPhone }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="RetailerAddress">
+      <mat-header-cell *matHeaderCellDef> RetailerAddress </mat-header-cell>
+      <mat-cell *matCellDef="let customer"> {{ retailer.RetailerAddress }} </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="RetailerEmail">

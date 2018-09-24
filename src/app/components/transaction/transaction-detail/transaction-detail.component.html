@@ -1,0 +1,26 @@
+<h1>Details</h1>
+
+<hr>
+<div *ngIf="transaction">
+  <div>
+    <label for="">TransactionId:</label>
+    <span>{{transaction.TransactionId}}</span>
+  </div>
+  <div>
+    <label for="">Product Quantity:</label>
+    <span>{{transaction.ProductQuantity}}</span>
+  </div>
+  <div>
+    <label for="">Product:</label>
+    <span>{{transaction.Product}}</span>
+  </div>
+  <div>
+    <label for="">Product Price:</label>
+    <span>{{transaction.ProductPrice}}</span>
+  </div>
+  <div>
+    <label for="">Transaction Date</label>
+    <span>{{transaction.transactionDate | date: 'fullDate'}}</span>
+  </div>
+</div>
+<button mat-button color="primary" routerLink="/transactions">Back to List</button>
