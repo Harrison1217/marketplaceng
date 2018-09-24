@@ -1,0 +1,19 @@
+<h1>Transactions </h1>
+<hr>
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="transactionForm">
+  <div>
+    <div>
+      <mat-form-field>
+        <input matInput placeHolder="Product Name" type="Product" required/>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Price" type="ProductPrice" required/>
+      </mat-form-field>
+    </div>
+  </div>
+  <button mat-raised-button class="nav-btn" color="primary" type="submit">Create Transaction</button>
+</form>
+<a mat-button routerLink="/Transactions">Back to Transactions</a>
