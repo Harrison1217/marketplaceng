@@ -16,8 +16,8 @@ export class RegistrationComponent implements OnInit {
   selectedValue: string;
 
   roles: Role[] = [
-    { role: 'Customer' },
-    { role: 'Retailer' }
+    { value: 'Customer', role: 'Customer' },
+    { value: 'Retailer', role: 'Retailer' }
   ];
 
   constructor(private _form: FormBuilder, private _authService: AuthService) { }

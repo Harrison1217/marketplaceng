@@ -33,7 +33,7 @@ const routes = [
     HeaderComponent,
     RegistrationComponent,
     LoginComponent,
-    TransactionIndexComponent
+    TransactionIndexComponent,
     CustomerIndexComponent
   ],
   imports: [
