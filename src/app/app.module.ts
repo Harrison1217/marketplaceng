@@ -45,7 +45,7 @@ const routes = [
     path: 'retailer', children: [
       { path: '', component: RetailerComponent },
       { path: 'create', component: RetailerCreateComponent },
-      { path: 'detail/:id', component: TransactionDetailComponent }
+      { path: 'detail/:id', component: RetailerDetailComponent }
     ]
   },  {
     path: 'transactions', children: [

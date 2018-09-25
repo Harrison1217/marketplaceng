@@ -33,7 +33,7 @@ createForm(){
 
 onSubmit(){
   this._retailerService.createRetailers(this.retailerForm.value).subscribe(data => {
-    this._router.navigate(['/retailers'])
+    this._router.navigate(['/retailer'])
   })
 }
 }
