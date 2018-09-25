@@ -37,7 +37,12 @@ const routes = [
       { path: 'create', component: ProductCreateComponent },
     ]
   },
-  { path: 'customers', component: CustomerIndexComponent },
+  {
+    path: 'customer', children: [
+      { path: '', component: CustomerIndexComponent },
+      { path: 'create', component: CustomerCreateComponent }
+    ]
+  },
 
   { path: 'transactions', component: TransactionIndexComponent },
   {path: 'retailer/create', component: RetailerComponent},

@@ -14,26 +14,26 @@ export class RetailerCreateComponent implements OnInit {
 
   retailerForm: FormGroup;
 
-  constructor(private _retailerService: RetailersService, private _form: FormBuilder, private _router: Router) { 
-  this.createForm();
-}
+  constructor(private _retailerService: RetailersService, private _form: FormBuilder, private _router: Router) {
+    this.createForm();
+  }
   ngOnInit() {
   }
 
-createForm(){
-  this.retailerForm = this._form.group({
-    RetailerName: new FormControl,
-    RetailerEin: new FormControl,
-    RetailerAddress: new FormControl,
-    RetailerEmail: new FormControl,
-    RetailerPhone: new FormControl
-  })
-}
+  createForm() {
+    this.retailerForm = this._form.group({
+      RetailerName: new FormControl,
+      RetailerEin: new FormControl,
+      RetailerAddress: new FormControl,
+      RetailerEmail: new FormControl,
+      RetailerPhone: new FormControl
+    });
+  }
 
 
-onSubmit(){
-  this._retailerService.createRetailers(this.retailerForm.value).subscribe(data => {
-    this._router.navigate(['/retailers'])
-  })
-}
+  onSubmit() {
+    this._retailerService.createRetailers(this.retailerForm.value).subscribe(data => {
+      this._router.navigate(['/retailers']);
+    });
+  }
 }
