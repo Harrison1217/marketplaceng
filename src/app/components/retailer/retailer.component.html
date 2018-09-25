@@ -1,11 +1,17 @@
 <h1>Retailer</h1>
-<a mat-raised-button color="primary">Create New</a>
+<a mat-raised-button color="primary" routerLink="/retailer/create">Create New</a>
 <hr>
 <div>
   <mat-table #table [dataSource]="dataSource">
     <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
     <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
 
+    <ng-container matColumnDef="details">
+      <mat-header-cell *matHeaderCellDef class = "matColumnSize"></mat-header-cell>
+      <mat-cell *matCellDef="let retailer" routerLink="/retailer/detail/{{retailer.RetailerId}}">
+      <i class="material-icons">library_books</i>
+    </mat-cell>
+    </ng-container>
     <ng-container matColumnDef="RetailerId">
       <th mat-header-cell *matHeaderCellDef> Retailer # </th>
       <td mat-cell *matCellDef="let customer"> {{ retailer.Retailerid }} </td>

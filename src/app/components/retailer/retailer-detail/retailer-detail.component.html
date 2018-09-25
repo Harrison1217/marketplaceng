@@ -1,0 +1,32 @@
+<p>
+  retailer-detail works!
+</p>
+
+<hr>
+<div *ngIf="retailer-detail">
+  <label for=" ">RetailerId</label>
+  <span>{{retailer.RetailerId}}</span>
+</div>
+<div>
+  <label for=" ">RetailerName</label>
+  <span>{{retailer.RetailerName}}</span>
+</div>
+<div>
+  <label for=" ">RetailerEin</label>
+  <span>{{retailer.RetailerEin}}</span>
+</div>
+<div>
+  <label for=" ">RetailerEmail</label>
+  <span>{{retailer.RetailerEmail}}</span>
+</div>
+<div>
+  <label for=" ">RetailerPhone</label>
+  <span>{{retailer.RetailerPhone}}</span>
+</div>
+<div>
+  <label for=" ">RetailerAddress</label>
+  <span>{{retailer.RetailerAddress}}</span>
+</div>
+
+<button mat-button color="accent">Edit</button>
+<button mat-button color="primary" routerLink="/retailer">Back To List</button>
