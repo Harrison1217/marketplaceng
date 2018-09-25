@@ -1,50 +1,51 @@
 <h1>Index</h1>
-<a mat-raised-button color="primary">Create New</a>
+<a mat-raised-button color="primary" routerLink="/product/create">Create New</a>
 <hr>
 
 <div>
-  <table mat-table [dataSource]="dataSource">
-  <tr mat-row *matRowDef="let row; columns: columnsNames;"></tr>
+  <mat-table #table [dataSource]="dataSource">
+    <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
 
-  <ng-container matColumnDef="ProductId">
+    <ng-container matColumnDef="ProductId">
+      <mat-header-cell *matHeaderCellDef> Product # </mat-header-cell>
+      <mat-cell *matCellDef="let product"> {{product.ProductId}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="ProductName">
+      <mat-header-cell *matHeaderCellDef> Product # </mat-header-cell>
+      <mat-cell *matCellDef="let product"> {{product.ProductName}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="ProductUpc">
+      <mat-header-cell *matHeaderCellDef> Product # </mat-header-cell>
+      <mat-cell *matCellDef="let product"> {{product.ProductUpc}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="ProductPrice">
+      <mat-header-cell *matHeaderCellDef> Product # </mat-header-cell>
+      <mat-cell *matCellDef="let product"> {{product.ProductPrice}} </mat-cell>
+    </ng-container>
+    <!-- <ng-container matColumnDef="ProductCost">
     <th mat-header-cell *matHeaderCellDef> Product # </th>
-    <td mat-cell *matcellDef="let product"> {{product.ProductId}} </td>
-  </ng-container>
-  <ng-container matColumnDef="ProductName">
-    <th mat-header-cell *matHeaderCellDef> Product # </th>
-    <td mat-cell *matcellDef="let product"> {{product.ProductId}} </td>
-  </ng-container>
-  <ng-container matColumnDef="ProductUpc">
-    <th mat-header-cell *matHeaderCellDef> Product # </th>
-    <td mat-cell *matcellDef="let product"> {{product.ProductId}} </td>
-  </ng-container>
-  <ng-container matColumnDef="ProductPrice">
-    <th mat-header-cell *matHeaderCellDef> Product # </th>
-    <td mat-cell *matcellDef="let product"> {{product.ProductId}} </td>
-  </ng-container>
-  <!-- <ng-container matColumnDef="ProductCost">
-    <th mat-header-cell *matHeaderCellDef> Product # </th>
-    <td mat-cell *matcellDef="let product"> {{product.ProductId}} </td>
+    <td mat-cell *matCellDef="let product"> {{product.ProductId}} </td>
   </ng-container>
   <ng-container matColumnDef="ProductProfit">
     <th mat-header-cell *matHeaderCellDef> Product # </th>
-    <td mat-cell *matcellDef="let product"> {{product.ProductId}} </td>
+    <td mat-cell *matCellDef="let product"> {{product.ProductId}} </td>
   </ng-container>
   <ng-container matColumnDef="ProductOnSale">
     <th mat-header-cell *matHeaderCellDef> Product # </th>
-    <td mat-cell *matcellDef="let product"> {{product.ProductId}} </td>
+    <td mat-cell *matCellDef="let product"> {{product.ProductId}} </td>
   </ng-container> -->
-  <ng-container matColumnDef="ProductCategory">
-    <th mat-header-cell *matHeaderCellDef> Product # </th>
-    <td mat-cell *matcellDef="let product"> {{product.ProductId}} </td>
-  </ng-container>
-  <ng-container matColumnDef="ProductDescription">
-    <th mat-header-cell *matHeaderCellDef> Product # </th>
-    <td mat-cell *matcellDef="let product"> {{product.ProductId}} </td>
-  </ng-container>
-  <ng-container matColumnDef="RetailerId">
-    <th mat-header-cell *matHeaderCellDef> Product # </th>
-    <td mat-cell *matcellDef="let product"> {{product.ProductId}} </td>
-  </ng-container>
-</table>
+    <ng-container matColumnDef="ProductCategory">
+      <mat-header-cell *matHeaderCellDef> Product # </mat-header-cell>
+      <mat-cell *matCellDef="let product"> {{product.ProductCategory}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="ProductDescription">
+      <mat-header-cell *matHeaderCellDef> Product # </mat-header-cell>
+      <mat-cell *matCellDef="let product"> {{product.ProductDescription}} </mat-cell>
+    </ng-container>
+  </mat-table>
 </div>
