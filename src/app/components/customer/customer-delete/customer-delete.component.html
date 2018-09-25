@@ -1,0 +1,41 @@
+<h1>Delete</h1>
+<h4>Are you sure you want to delete this?</h4>
+<hr>
+
+<div *ngIf="customer">
+  <div>
+    <label for=" ">CustomerId:</label>
+    <span>{{customer.CustomerId}}</span>
+  </div>
+  <div>
+    <label for=" ">CustomerFirstName:</label>
+    <span>{{customer.CustomerFirstName}}</span>
+  </div>
+  <div>
+    <label for=" ">CustomerLastName:</label>
+    <span>{{customer.CustomerLastName}}</span>
+  </div>
+  <div>
+    <label for=" ">CustomerPhone:</label>
+    <span>{{customer.CustomerPhone}}</span>
+  </div>
+  <div>
+    <label for=" ">CustomerStreetAddress:</label>
+    <span>{{customer.CustomerStreetAddress}}</span>
+  </div>
+  <div>
+    <label for=" ">State:</label>
+    <span>{{customer.State}}</span>
+  </div>
+  <div>
+    <label for=" ">City:</label>
+    <span>{{customer.City}}</span>
+  </div>
+  <div>
+    <label for=" ">Zip:</label>
+    <span>{{customer.Zip}}</span>
+  </div>
+</div>
+
+<button mat-button color="warn" (click)="onDelete()">Delete</button>
+<button mat-button color="primary" routerLink="/customer">Back to List</button>

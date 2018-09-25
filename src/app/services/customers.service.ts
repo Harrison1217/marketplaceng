@@ -28,6 +28,10 @@ export class CustomersService {
     return this._http.put(`${ApiUrl}/Customer`, customer, { headers: this.getHeaders() });
   }
 
+  deleteCustomer(id: number) {
+    return this._http.delete(`${ApiUrl}/Customer/${id}`, { headers: this.getHeaders() });
+  }
+
   getHeaders() {
     return new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('id_token')}`);
   }
