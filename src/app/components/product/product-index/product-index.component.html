@@ -1,4 +1,4 @@
-<h1>Index</h1>
+<h1>Products</h1>
 <a mat-raised-button color="primary" routerLink="/product/create">Create New</a>
 <hr>
 
@@ -13,17 +13,17 @@
     </ng-container>
 
     <ng-container matColumnDef="ProductName">
-      <mat-header-cell *matHeaderCellDef> Product # </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef> Product Name </mat-header-cell>
       <mat-cell *matCellDef="let product"> {{product.ProductName}} </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="ProductUpc">
-      <mat-header-cell *matHeaderCellDef> Product # </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef> UPC </mat-header-cell>
       <mat-cell *matCellDef="let product"> {{product.ProductUpc}} </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="ProductPrice">
-      <mat-header-cell *matHeaderCellDef> Product # </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef> Price</mat-header-cell>
       <mat-cell *matCellDef="let product"> {{product.ProductPrice}} </mat-cell>
     </ng-container>
     <!-- <ng-container matColumnDef="ProductCost">
@@ -39,12 +39,12 @@
     <td mat-cell *matCellDef="let product"> {{product.ProductId}} </td>
   </ng-container> -->
     <ng-container matColumnDef="ProductCategory">
-      <mat-header-cell *matHeaderCellDef> Product # </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef> Category </mat-header-cell>
       <mat-cell *matCellDef="let product"> {{product.ProductCategory}} </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="ProductDescription">
-      <mat-header-cell *matHeaderCellDef> Product # </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
       <mat-cell *matCellDef="let product"> {{product.ProductDescription}} </mat-cell>
     </ng-container>
   </mat-table>
