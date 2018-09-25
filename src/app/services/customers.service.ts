@@ -16,6 +16,10 @@ export class CustomersService {
     return this._http.get(`${ApiUrl}/Customer`, { headers: this.getHeaders() });
   }
 
+  getCustomer(id: string) {
+    return this._http.get(`${ApiUrl}/customer/${id}`, { headers: this.getHeaders() });
+  }
+
   createCustomer(customer: Customer) {
     return this._http.post(`${ApiUrl}/Customer`, customer, { headers: this.getHeaders() });
   }
