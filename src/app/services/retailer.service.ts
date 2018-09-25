@@ -10,6 +10,7 @@ const ApiUrl = 'https://efamarketplacewebapi.azurewebsites.net/api';
 })
 export class RetailersService {
   constructor(private _http: HttpClient) {}
+  
   getRetailers() {
     return this._http.get(`${ApiUrl}/retailer`, { headers: this.getHeaders() });
   }
