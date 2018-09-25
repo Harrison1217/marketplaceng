@@ -29,6 +29,7 @@ import { ProductDetailComponent } from './components/product/product-detail/prod
 import { TransactionDetailComponent } from './components/transaction/transaction-detail/transaction-detail.component';
 import { RetailerDetailComponent } from './components/retailer/retailer-detail/retailer-detail.component';
 import { CustomerDetailComponent } from './components/customer/customer-detail/customer-detail.component';
+import { CustomerEditComponent } from './components/customer/customer-edit/customer-edit.component';
 
 const routes = [
   { path: 'register', component: RegistrationComponent },
@@ -43,7 +44,8 @@ const routes = [
     path: 'customer', children: [
       { path: '', component: CustomerIndexComponent },
       { path: 'create', component: CustomerCreateComponent },
-      { path: 'detail/:id', component: CustomerDetailComponent }
+      { path: 'detail/:id', component: CustomerDetailComponent },
+      { path: 'edit/:id', component: CustomerEditComponent }
     ]
   },
 
@@ -81,7 +83,8 @@ const routes = [
     RetailerComponent,
     TransactionDetailComponent,
     RetailerDetailComponent,
-    CustomerDetailComponent
+    CustomerDetailComponent,
+    CustomerEditComponent
   ],
   imports: [
     BrowserModule,

@@ -24,6 +24,10 @@ export class CustomersService {
     return this._http.post(`${ApiUrl}/Customer`, customer, { headers: this.getHeaders() });
   }
 
+  updateCustomer(customer: Customer) {
+    return this._http.put(`${ApiUrl}/Customer`, customer, { headers: this.getHeaders() });
+  }
+
   getHeaders() {
     return new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('id_token')}`);
   }
