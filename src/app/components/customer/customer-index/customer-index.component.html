@@ -7,6 +7,13 @@
     <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
     <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
 
+    <ng-container matColumnDef="details">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
+      <mat-cell *matCellDef="let customer" routerLink="/customer/detail/{{customer.CustomerId}}">
+        <i class="material-icons">library_books0</i>
+      </mat-cell>
+    </ng-container>
+
     <ng-container matColumnDef="CustomerId">
       <mat-header-cell *matHeaderCellDef> Customer # </mat-header-cell>
       <mat-cell *matCellDef="let customer"> {{ customer.CustomerId }} </mat-cell>
@@ -50,6 +57,14 @@
     <ng-container matColumnDef="Zip">
       <mat-header-cell *matHeaderCellDef> Zip </mat-header-cell>
       <mat-cell *matCellDef="let customer"> {{ customer.Zip }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="buttons">
+      <mat-header-cell *matHeaderCellDef></mat-header-cell>
+      <mat-cell *matCellDef="let customer">
+        <i mat-icon class="material-icons" routerLink="/customer/edit/{{customer.CustomerId}}">Edit</i>
+        <i class="material-icons" routerLink="/customer/delete/{{customer.CustomerId}}">Delete</i>
+      </mat-cell>
     </ng-container>
   </mat-table>
 </div>

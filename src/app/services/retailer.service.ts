@@ -12,7 +12,7 @@ export class RetailersService {
   constructor(private _http: HttpClient) {}
   
   getRetailers() {
-    return this._http.get(`${ApiUrl}/retailer`, { headers: this.getHeaders() });
+    return this._http.get(`${ApiUrl}/Retailer`, { headers: this.getHeaders() });
   }
   createRetailers(retailer: Retailer){
     return this._http.post(`${ApiUrl}/Retailer`, retailer, {headers: this.getHeaders()});

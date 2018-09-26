@@ -28,6 +28,10 @@ import { ProductCreateComponent } from './components/product/product-create/prod
 import { ProductDetailComponent } from './components/product/product-detail/product-detail.component';
 import { TransactionDetailComponent } from './components/transaction/transaction-detail/transaction-detail.component';
 import { RetailerDetailComponent } from './components/retailer/retailer-detail/retailer-detail.component';
+import { CustomerDetailComponent } from './components/customer/customer-detail/customer-detail.component';
+import { CustomerEditComponent } from './components/customer/customer-edit/customer-edit.component';
+import { CustomerDeleteComponent } from './components/customer/customer-delete/customer-delete.component';
+import { AuthGuard } from './auth.guard';
 
 const routes = [
   { path: 'register', component: RegistrationComponent },
@@ -39,9 +43,12 @@ const routes = [
     ]
   },
   {
-    path: 'customer', children: [
+    path: 'customer', canActivate: [AuthGuard], children: [
       { path: '', component: CustomerIndexComponent },
-      { path: 'create', component: CustomerCreateComponent }
+      { path: 'create', component: CustomerCreateComponent },
+      { path: 'detail/:id', component: CustomerDetailComponent },
+      { path: 'edit/:id', component: CustomerEditComponent },
+      { path: 'delete/:id', component: CustomerDeleteComponent }
     ]
   },
 
@@ -78,7 +85,10 @@ const routes = [
     RetailerCreateComponent,
     RetailerComponent,
     TransactionDetailComponent,
-    RetailerDetailComponent
+    RetailerDetailComponent,
+    CustomerDetailComponent,
+    CustomerEditComponent,
+    CustomerDeleteComponent
   ],
   imports: [
     BrowserModule,
@@ -96,6 +106,7 @@ const routes = [
   ],
   providers: [
     AuthService,
+    AuthGuard,
     CustomersService,
     ProductsService,
     CustomersService,
