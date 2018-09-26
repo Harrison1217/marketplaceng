@@ -1,9 +1,11 @@
-<mat-toolbar color="primary">
-  <span>MyMarketplace</span>
+<mat-toolbar>
+  <span>My Market Place </span>
+  <span *ngIf="isLoggedIn">{{username}}</span>
   <span class="example-fill-remaining-space"></span>
   <button mat-raised-button class="nav-btn" routerLink="/customer">Customers</button>
   <button mat-raised-button class="nav-btn" routerLink="/retailer">Retailers</button>
   <button mat-raised-button class="nav-btn" routerLink="/product">Products</button>
-  <button mat-raised-button class="nav-btn" routerLink="/register">Register</button>
-  <button mat-raised-button class="nav-btn" routerLink="/login">Login</button>
+  <button mat-raised-button class="nav-btn" routerLink="/register" *ngIf="!isLoggedIn">Register</button>
+  <button mat-raised-button class="nav-btn" routerLink="/login" *ngIf="!isLoggedIn">Login</button>
+  <button mat-raised-button class="nav-btn" (click)="logout()" *ngIf="isLoggedIn">Logout</button>
 </mat-toolbar>
