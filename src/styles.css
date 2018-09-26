@@ -4,8 +4,19 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', 'Arial', sans-serif;
+    font-family: 'Roboto', 'Arial', Verdana, Geneva, Tahoma, sans-serif;
+    background-color: darkviolet;
+    color: goldenrod;
 }
+
+mat-raised-button {
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: goldenrod;
+    color: darkviolet;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
 
 .mat-radio-button ~ .mat-radio-button {
     padding-right: 16px;
