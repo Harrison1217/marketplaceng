@@ -16,7 +16,9 @@ export class TransactionDetailComponent implements OnInit {
 
   ngOnInit() {
     this._activatedRoute.paramMap.subscribe(routeData => {
-      console.log(routeData);
+      this._transactionService.getTransaction(routeData.get('id')).subscribe((singleTransaction: Transaction) => {
+        this.transaction = singleTransaction;
+      });
     });
   }
 
