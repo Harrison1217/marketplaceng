@@ -5,7 +5,7 @@ import { Token } from '../models/Token';
 import { Router } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
 
-const Api_Url = 'https://efamarketplacewebapi.azurewebsites.net';
+const Api_Url = 'http://localhost:51668';
 
 @Injectable({
   providedIn: 'root'
@@ -41,12 +41,19 @@ export class AuthService {
     return this._http.get(`${Api_Url}/api/Account/UserInfo`, { headers: this.setHeader() });
   }
 
+  adminCheck(): Observable<Object> {
+    if (!localStorage.getItem('id_token')) { return new Observable(observer => observer.next(false)); }
+
+    return this._http.get(`${Api_Url}/api/Account/adminCheck`, { headers: this.setHeader() });
+  }
+
   logout() {
     localStorage.clear();
     this.isLoggedIn.next(false);
 
     this._http.post(`${Api_Url}/api/Account/Logout`, { headers: this.setHeader() });
     this._router.navigate(['/login']);
+    window.location.reload();
   }
 
   private setHeader(): HttpHeaders {
