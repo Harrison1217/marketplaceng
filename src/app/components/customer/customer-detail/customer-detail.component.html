@@ -1,8 +1,8 @@
-<h1>{{ customer.CustomerFirstName }} {{ customer.CustomerLastName }}</h1>
+<h1 id="colorh1">{{ customer.CustomerFirstName }} {{ customer.CustomerLastName }}</h1>
 <hr>
 
 <hr>
-<div *ngIf="customer">
+<div *ngIf="customer" id="border">
   <div>
     <label for=" ">CustomerId: </label>
     <span>{{customer.CustomerId}}</span>
@@ -21,4 +21,4 @@
 </div>
 
 <button mat-button class="edit" routerLink="/customer/edit/{{ customer.CustomerId }}">Edit</button>
-<button mat-button class="btn" routerLink="/customer">Back to List</button>
+<button mat-button class="back" routerLink="/customer">Back to List</button>
