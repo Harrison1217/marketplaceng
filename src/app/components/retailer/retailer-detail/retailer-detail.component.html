@@ -1,32 +1,33 @@
-<p>
-  retailer-detail works!
-</p>
+<p>Details</p>
+<hr>
 
 <hr>
-<div *ngIf="retailer-detail">
-  <label for=" ">RetailerId</label>
+<div *ngIf="retailer">
+  <div>
+  <label for=" ">RetailerId: </label>
   <span>{{retailer.RetailerId}}</span>
 </div>
 <div>
-  <label for=" ">RetailerName</label>
+  <label for=" ">RetailerName: </label>
   <span>{{retailer.RetailerName}}</span>
 </div>
 <div>
-  <label for=" ">RetailerEin</label>
+  <label for=" ">RetailerEin: </label>
   <span>{{retailer.RetailerEin}}</span>
 </div>
 <div>
-  <label for=" ">RetailerEmail</label>
+  <label for=" ">RetailerEmail: </label>
   <span>{{retailer.RetailerEmail}}</span>
 </div>
 <div>
-  <label for=" ">RetailerPhone</label>
+  <label for=" ">RetailerPhone: </label>
   <span>{{retailer.RetailerPhone}}</span>
 </div>
 <div>
-  <label for=" ">RetailerAddress</label>
+  <label for=" ">RetailerAddress: </label>
   <span>{{retailer.RetailerAddress}}</span>
 </div>
-
-<button mat-button class="edit">Edit</button>
+</div>
+<a mat-button class="edit" routerLink="/retailer">Edit</a>
 <button mat-button class="btn" routerLink="/retailer">Back To List</button>
+

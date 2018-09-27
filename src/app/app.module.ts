@@ -32,6 +32,8 @@ import { CustomerDetailComponent } from './components/customer/customer-detail/c
 import { CustomerEditComponent } from './components/customer/customer-edit/customer-edit.component';
 import { CustomerDeleteComponent } from './components/customer/customer-delete/customer-delete.component';
 import { AuthGuard } from './auth.guard';
+import { RetailerEditComponent } from './components/retailer/retailer-edit/retailer-edit.component';
+import { RetailerDeleteComponent } from './components/retailer/retailer-delete/retailer-delete.component';
 
 const routes = [
   { path: 'register', component: RegistrationComponent },
@@ -57,7 +59,9 @@ const routes = [
     path: 'retailer', children: [
       { path: '', component: RetailerComponent },
       { path: 'create', component: RetailerCreateComponent },
-      { path: 'detail/:id', component: TransactionDetailComponent }
+      { path: 'detail/:id', component: RetailerDetailComponent },
+      { path: 'edit/:id', component: RetailerEditComponent },
+      { path: 'delete/:id', component: RetailerDeleteComponent }
     ]
   },  {
     path: 'transactions', children: [
@@ -88,7 +92,9 @@ const routes = [
     RetailerDetailComponent,
     CustomerDetailComponent,
     CustomerEditComponent,
-    CustomerDeleteComponent
+    CustomerDeleteComponent,
+    RetailerEditComponent,
+    RetailerDeleteComponent
   ],
   imports: [
     BrowserModule,

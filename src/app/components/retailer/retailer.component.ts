@@ -11,7 +11,7 @@ import { MatTableDataSource } from '@angular/material';
 
 export class RetailerComponent implements OnInit {
 
-  columnNames = ['RetailerId', 'RetailerName', 'RetailerEin', 'RetailerAddress', 'RetailerEmail', 'RetailerPhone',];
+  columnNames = ['details', 'RetailerId', 'RetailerName', 'RetailerEin', 'RetailerAddress', 'RetailerEmail', 'RetailerPhone', 'buttons'];
   dataSource: MatTableDataSource<Retailer>;
 
   constructor(private _retailerService: RetailersService) { }
