@@ -8,8 +8,8 @@ mat-raised-button {
 }
 .btn{
     border-radius: 10px;
-    border: 1px solid white;
+    border: 1px solid whitesmoke;
     background-color: goldenrod;
-    color: darkviolet;
+    color: darkblue;
     font-family: Verdana, Geneva, Tahoma, sans-serif
 }
