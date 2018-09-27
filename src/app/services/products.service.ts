@@ -26,5 +26,9 @@ export class ProductsService {
   getProduct(id: string) {
     return this._http.get(`${ApiUrl}/Product/${id}`, { headers: this.getHeaders() });
   }
+
+  updateProduct(product: Product){
+    return this._http.put(`${ApiUrl}/Product`, product, { headers: this.getHeaders() });
+  }
 }
 

@@ -34,6 +34,7 @@ import { CustomerDeleteComponent } from './components/customer/customer-delete/c
 import { AuthGuard } from './auth.guard';
 import { RetailerEditComponent } from './components/retailer/retailer-edit/retailer-edit.component';
 import { RetailerDeleteComponent } from './components/retailer/retailer-delete/retailer-delete.component';
+import { ProductEditComponent } from './components/product/product-edit/product-edit.component';
 
 const routes = [
   { path: 'register', component: RegistrationComponent },
@@ -97,7 +98,8 @@ const routes = [
     CustomerEditComponent,
     CustomerDeleteComponent,
     RetailerEditComponent,
-    RetailerDeleteComponent
+    RetailerDeleteComponent,
+    ProductEditComponent
   ],
   imports: [
     BrowserModule,
