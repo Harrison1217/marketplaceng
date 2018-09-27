@@ -1,0 +1,14 @@
+.btn{
+    border-radius: 10px;
+    border: 1px solid whitesmoke;
+    background-color: goldenrod;
+    color: darkblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+.save{
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: green;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
