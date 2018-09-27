@@ -6,3 +6,10 @@ mat-raised-button {
     font-family: Verdana, Geneva, Tahoma, sans-serif
 
 }
+.btn{
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: goldenrod;
+    color: darkviolet;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
