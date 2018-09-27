@@ -12,19 +12,16 @@ export class RetailersService {
   constructor(private _http: HttpClient) {}
   
   getRetailers() {
-    return this._http.get(`${ApiUrl}/retailer/details/`, { headers: this.getHeaders() });
+    return this._http.get(`${ApiUrl}/retailer`, { headers: this.getHeaders() });
   }
   createRetailers(retailer: Retailer){
     return this._http.post(`${ApiUrl}/retailer`, retailer, {headers: this.getHeaders()});
   }
   getRetailer(id: string){
     return this._http.get(`${ApiUrl}/retailer/${id}`, {headers: this.getHeaders()});
-<<<<<<< HEAD
   }
   updateRetailer(retailer: Retailer){
     return this._http.put(`${ApiUrl}/retailer`, retailer, {headers: this.getHeaders()});
-=======
->>>>>>> 50f9d96d55c358afbebd1480ee1d94588ec272f3
   }
 
   deleteRetailer(id: number){

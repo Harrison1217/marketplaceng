@@ -3,6 +3,7 @@
   
   <hr>
   <div *ngIf="retailer">
+    <div>
     <label for=" ">RetailerId</label>
     <span>{{retailer.RetailerId}}</span>
   </div>
@@ -26,6 +27,6 @@
     <label for=" ">RetailerAddress</label>
     <span>{{retailer.RetailerAddress}}</span>
   </div>
-
+</div>
   <button mat-button color="warn" (click)="onDelete()">Delete</button>
   <button mat-button color="primary" routerLink="/retailer">Back to List</button>
