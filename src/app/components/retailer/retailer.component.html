@@ -6,13 +6,13 @@
     <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
     <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
 
-    <ng-container matColumnDef="Details">
+    <ng-container matColumnDef="details">
       <mat-header-cell *matHeaderCellDef class="matColumnSize"> Details </mat-header-cell>
       <mat-cell *matCellDef="let retailer" routerLink="/retailer/detail/{{retailer.RetailerId}}">
         <i class="material-icons">library_books</i>
       </mat-cell>
     </ng-container>
-
+    
     <ng-container matColumnDef="RetailerId">
       <mat-header-cell *matHeaderCellDef> Retailer # </mat-header-cell>
       <mat-cell *matCellDef="let retailer"> {{ retailer.RetailerId }} </mat-cell>
@@ -42,5 +42,13 @@
       <mat-header-cell *matHeaderCellDef> RetilerEmail </mat-header-cell>
       <mat-cell *matCellDef="let retailer"> {{ retailer.RetailerEmail }} </mat-cell>
     </ng-container>
+
+    <ng-container matColumnDef="buttons">
+        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+        <mat-cell *matCellDef="let retailer">
+          <i mat-icon class="material-icons" routerLink="/retailer/edit/{{retailer.RetailerId}}">Edit</i>
+          <i class="material-icons" routerLink="/retailer/delete/{{retailer.RetailerId}}">Delete</i>
+        </mat-cell>
+      </ng-container>
   </mat-table>
 </div>
