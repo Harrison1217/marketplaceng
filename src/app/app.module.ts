@@ -59,10 +59,14 @@ const routes = [
     path: 'retailer', children: [
       { path: '', component: RetailerComponent },
       { path: 'create', component: RetailerCreateComponent },
+<<<<<<< HEAD
       { path: 'detail/:id', component: RetailerDetailComponent },
       { path: 'edit/:id', component: RetailerEditComponent },
       { path: 'delete/:id', component: RetailerDeleteComponent }
 
+=======
+      { path: 'detail/:id', component: RetailerDetailComponent }
+>>>>>>> 50f9d96d55c358afbebd1480ee1d94588ec272f3
     ]
   },  {
     path: 'transactions', children: [
