@@ -1,0 +1,52 @@
+<h1>Customer Transactions</h1>>
+<a mat-raised-button color="primary">Create New</a>
+<hr>
+<div>
+  <mat-table #table [dataSource]="dataSource">
+    <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
+  </mat-table>
+
+  <ng-container matColumnDef="TransactionId">
+    <mat-header-cell *matHeaderCellDef> Transaction # </mat-header-cell>
+    <mat-cell *matCellDef="let Transaction"> {{ Transaction.TransactionId }} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="ProductId">
+    <mat-header-cell *matHeaderCellDef> Transaction # </mat-header-cell>
+    <mat-cell *matCellDef="let Transaction"> {{ Transaction.ProductId }} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="Product">
+    <mat-header-cell *matHeaderCellDef> Transaction # </mat-header-cell>
+    <mat-cell *matCellDef="let Transaction"> {{ Transaction.Product }} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="#Items">
+    <mat-header-cell *matHeaderCellDef> Transaction # </mat-header-cell>
+    <mat-cell *matCellDef="let Transaction"> {{ Transaction.NumItems }} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="ProductPrice">
+    <mat-header-cell *matHeaderCellDef> Transaction # </mat-header-cell>
+    <mat-cell *matCellDef="let Transaction"> {{ Transaction.ProductPrice }} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="Customer">
+    <mat-header-cell *matHeaderCellDef> Transaction # </mat-header-cell>
+    <mat-cell *matCellDef="let Transaction"> {{ Transaction.Customer }} </mat-cell>
+  </ng-container>
+  
+  <ng-container matColumnDef="TransactionDate">
+    <mat-header-cell *matHeaderCellDef> Transaction # </mat-header-cell>
+    <mat-cell *matCellDef="let customer"> {{ Transaction.TransactionDate }} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="details">
+    <mat-header-cell *matheaderCellDef class="MatColumnsize"></mat-header-cell>
+    <mat-cell *matCellDef="let Transaction" routerLink="/Transaction/details/{{Transaction.TransactionId"}}>
+      <i class="material-icons">Transaction</i>      
+    </mat-cell>
+  </ng-container>
+    
+</div>

@@ -1,0 +1,39 @@
+
+<h1>Edit A Note</h1>
+<hr>
+
+<div *ngIf = "retailer">
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editRetailerForm">
+  <div>
+    <div hidden>
+        <mat-form-field>
+            <input matInput placeholder="RetailerId" formControlName="RetailerId" type="RetailerId" required [value] ="retailer.RetailerId"/>
+          </mat-form-field>
+        </div>
+      <mat-form-field>
+        <input matInput placeholder="RetailerName" formControlName="RetailerName" type="RetailerName" required [value] ="retailer.RetailerName"/>
+      </mat-form-field>
+    </div>
+  <div>
+      <mat-form-field>
+        <input matInput placeholder="RetailerEin" formControlName="RetailerEin" type="RetailerEin" required [value] ="retailer.RetailerEin"/>
+      </mat-form-field>
+    </div>
+  <div>
+  <mat-form-field>
+    <input matInput placeholder="RetailerAddress" formControlName="RetailerAddress" type="RetailerAddress" required [value] ="retailer.RetailerAddress"/>
+  </mat-form-field>
+</div>
+<div>
+<mat-form-field>
+  <input matInput placeholder="RetailerEmail" formControlName="RetailerEmail" type="RetailerEmail" required [value] ="retailer.RetailerEmail"/>
+</mat-form-field>
+</div>
+<div>
+<mat-form-field>
+  <input matInput placeholder="RetailerPhone" formControlName="RetailerPhone" type="RetailerPhone" required [value] ="retailer.RetailerPhone"/>
+</mat-form-field>
+</div>
+  <button mat-raised-button class="nav-btn" color="primary" type="submit">Save Retailer</button>
+</form>
+<a mat-button routerLink="/retailer">Back to List</a>

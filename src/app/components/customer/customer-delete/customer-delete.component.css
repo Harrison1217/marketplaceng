@@ -1,0 +1,23 @@
+mat-raised-button {
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: goldenrod;
+    color: darkviolet;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+
+}
+
+.btn{
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: goldenrod;
+    color: darkviolet;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+.delete{
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: red;
+    color: Black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

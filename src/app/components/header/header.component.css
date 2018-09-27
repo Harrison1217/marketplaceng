@@ -1,0 +1,19 @@
+.example-fill-remaining-space {
+    flex: 1 1 auto;
+}
+
+mat-toolbar {
+    background-color: darkviolet;
+    border: 5px solid goldenrod;
+    color: goldenrod;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nav-btn {
+    margin-right: 0.5em;
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: goldenrod;
+    color: darkviolet;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}

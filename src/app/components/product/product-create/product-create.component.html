@@ -1,0 +1,55 @@
+<h1>Create a Product.</h1>
+<hr>
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="productForm">
+  <div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Product Name" formControlName="ProductName" type="ProductName"/>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Product UPC" formControlName="ProductUpc" type="ProductUpc" required/>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="ProductPrice" formControlName="ProductPrice" type="ProductPrice" required/>
+      </mat-form-field>
+    </div>
+    <!-- <div>
+      <mat-form-field>
+        <input matInput placeholder="ProductCost" formControlName="ProductCost" type="ProductCost" required/>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="ProductProfit" formControlName="ProductProfit" type="ProductProfit" required/>
+      </mat-form-field>
+    </div> -->
+    <!-- <div>
+      <mat-form-field>
+        <input matInput placeholder="ProductOnSale" formControlName="ProductOnSale" type="ProductOnSale" required/>
+      </mat-form-field>
+    </div> -->
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="ProductCategory" formControlName="ProductCategory" type="ProductCategory" required/>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="ProductDescription" formControlName="ProductDescription" type="ProductDescription" required/>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="RetailerId" formControlName="RetailerId" type="RetailerId" required/>
+      </mat-form-field>
+    </div>
+  </div>
+  <button mat-raised-button class="btn" type="submit">Create Product</button>
+</form>
+
+<a mat-button class="btn" routerLink="/product">Back to List</a>
