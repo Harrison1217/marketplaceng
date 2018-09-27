@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
   username: string;
   isLoggedIn: boolean;
+  isAdmin: boolean;
 
   constructor(public _authService: AuthService, private _router: Router) { }
 
@@ -18,10 +19,16 @@ export class HeaderComponent implements OnInit {
       this.isLoggedIn = d.isLoggedIn;
     });
 
+    this.adminCheck();
+
     if (localStorage.getItem('id_token')) {
       this.isLoggedIn = true;
       this.username = localStorage.getItem('user');
     }
+  }
+
+  adminCheck() {
+    this._authService.adminCheck().subscribe((result: boolean) => this.isAdmin = result);
   }
 
   logout() {
