@@ -19,3 +19,12 @@
     color: whitesmoke;
     font-family: Verdana, Geneva, Tahoma, sans-serif
 }
+#border{
+    border:3px solid goldenrod;
+    background-color: whitesmoke;
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-bottom: 10px;
+}
+
+
