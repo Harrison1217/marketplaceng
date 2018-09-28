@@ -1,8 +1,8 @@
 
-<h1>Edit A Note</h1>
+<h1 id="colorh1">Edit Retailer</h1>
 <hr>
 
-<div *ngIf = "retailer">
+<div *ngIf = "retailer" id="border">
 <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editRetailerForm">
   <div>
     <div hidden>
@@ -36,4 +36,5 @@
 </div>
 <button mat-raised-button class="save" type="submit">Save</button>
 </form>
-<a mat-button class="btn" routerLink="/retailer">Back to List</a>
+</div>
+<a mat-button class="back" routerLink="/retailer">Back to List</a>
