@@ -52,9 +52,9 @@ export class ProductEditComponent implements OnInit {
       ProductCategory: form.value.ProductCategory,
       ProductUpc: form.value.ProductUpc,
       ProductDescription: form.value.ProductDescription,
-
+      ProductCost: form.value.ProductCost,
+      RetailerId: 15,
       
-     
 
     };
     this._productService.updateProduct(updateProduct).subscribe(d => {
