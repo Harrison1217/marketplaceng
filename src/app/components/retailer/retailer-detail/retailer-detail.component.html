@@ -1,8 +1,6 @@
-<p>Details</p>
+<h1 id="colorh1">Details</h1>
 <hr>
-
-<hr>
-<div *ngIf="retailer">
+<div *ngIf="retailer" id="border">
   <div>
   <label for=" ">RetailerId: </label>
   <span>{{retailer.RetailerId}}</span>
@@ -27,7 +25,8 @@
   <label for=" ">RetailerAddress: </label>
   <span>{{retailer.RetailerAddress}}</span>
 </div>
+
 </div>
-<button mat-button class= "edit" routerLink="/retailer/edit/{{ retailer.RetailerId }}">Edit</button>
-<button mat-button class= "btn" routerLink="/retailer">Back To List</button>
+<button mat-button class= "edit" routerLink="/retailer/edit/{{retailer.RetailerId}}">Edit</button>
+<button mat-button class= "back" routerLink="/retailer">Back To List</button>
 
