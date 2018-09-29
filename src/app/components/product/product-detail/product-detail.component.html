@@ -1,10 +1,10 @@
-<h1>{{ product.ProductName }}</h1>
-<hr>
+<h1>Details</h1>
+
 
 <div *ngIf="product">
   <div>
     <label for=" ">ProductId </label>
-    <span>{{product.ProductId}}</span>
+    <span>{{ product.ProductId }}</span>
   </div>
   <div>
     <label for=" ">ProductName</label>
@@ -12,21 +12,21 @@
   </div>
   <div>
     <label for=" ">ProductPrice</label>
-    <span>{{prduct.ProductPrice}}</span>
+    <span>{{product.ProductPrice}}</span>
   </div>
   <div>
     <label for=" ">ProductCategory</label>
-    <span>{{prduct.ProductCategory}}</span>
+    <span>{{product.ProductCategory}}</span>
   </div>
   <div>
     <label for=" ">ProductDescription</label>
-    <span>{{prduct.ProductDescription}}</span>
+    <span>{{product.ProductDescription}}</span>
   </div>
   <div>
       <label for=" ">RetailerId</label>
-      <span>{{prduct.RetailerId}}</span>
+      <span>{{product.RetailerId}}</span>
     </div>
 </div>
 
-<button mat-button color="accent" routerLink="/product/edit/{{ product.ProductId }}">Edit</button>
+<button mat-button color="accent">Edit</button>
 <button mat-button color="primary" routerLink="/product">Back to List</button>
