@@ -35,6 +35,7 @@ import { AuthGuard } from './auth.guard';
 import { RetailerEditComponent } from './components/retailer/retailer-edit/retailer-edit.component';
 import { RetailerDeleteComponent } from './components/retailer/retailer-delete/retailer-delete.component';
 import { ProductEditComponent } from './components/product/product-edit/product-edit.component';
+import { FaqComponent } from './components/faq/faq.component';
 
 const routes = [
   { path: 'register', component: RegistrationComponent },
@@ -48,6 +49,8 @@ const routes = [
       //{ path: 'delete/:id', component: ProductDeleteComponent }
     ]
   },
+  { path: 'faq', component: FaqComponent },
+
   {
     path: 'customer', canActivate: [AuthGuard], children: [
       { path: '', component: CustomerIndexComponent },
@@ -99,7 +102,8 @@ const routes = [
     CustomerDeleteComponent,
     RetailerEditComponent,
     RetailerDeleteComponent,
-    ProductEditComponent
+    ProductEditComponent,
+    FaqComponent
   ],
   imports: [
     BrowserModule,
