@@ -12,7 +12,7 @@ export class ProductIndexComponent implements OnInit {
 
   constructor(private _productService: ProductsService) { }
 
-  columnNames = ['ProductId', 'ProductName', 'ProductUpc', 'ProductPrice', 'ProductCategory', 'ProductDescription'];
+  columnNames = ['details', 'ProductId', 'ProductName', 'ProductUpc', 'ProductPrice', 'ProductCategory', 'ProductDescription', 'buttons'];
   dataSource: MatTableDataSource<Product>;
 
   ngOnInit() {

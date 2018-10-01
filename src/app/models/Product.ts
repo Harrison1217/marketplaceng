@@ -1,14 +1,10 @@
 export interface Product {
-    ProductId?: number;
+    ProductId: number;
     ProductName: string;
-    ProductUpc?: number;
-    ProductPrice?: number;
+    ProductUpc: number;
+    ProductPrice: number;
     ProductQuantity: number;
-    // ProductCost?: number;
-    // ProductProfit?: number;
-    // ProductOnSale?: boolean;
+    ProductCost: number;
     ProductCategory: string;
     ProductDescription: string;
-    RetailerId?: number;
-    OwnerId?: string;
 }

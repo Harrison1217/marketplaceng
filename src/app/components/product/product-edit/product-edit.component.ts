@@ -15,16 +15,16 @@ export class ProductEditComponent implements OnInit {
 
   editProductForm: FormGroup;
   constructor(private _form: FormBuilder,
-              private _productService: ProductsService,
-              private _ar: ActivatedRoute,
-              private _router: Router) {
+    private _productService: ProductsService,
+    private _ar: ActivatedRoute,
+    private _router: Router) {
 
-      this._ar.paramMap.subscribe(p => {
-        this._productService.getProduct(p.get('id')).subscribe((singleProduct: Product) => {
-          this.product = singleProduct;
-          this.createForm();
-        });
+    this._ar.paramMap.subscribe(p => {
+      this._productService.getProduct(p.get('id')).subscribe((singleProduct: Product) => {
+        this.product = singleProduct;
+        this.createForm();
       });
+    });
   }
 
   ngOnInit() {
@@ -35,11 +35,11 @@ export class ProductEditComponent implements OnInit {
       ProductId: new FormControl(this.product.ProductId),
       ProductName: new FormControl(this.product.ProductName),
       ProductPrice: new FormControl(this.product.ProductPrice),
+      ProductCost: new FormControl(this.product.ProductCost),
       ProductQuantity: new FormControl(this.product.ProductQuantity),
       ProductCategory: new FormControl(this.product.ProductCategory),
       ProductUpc: new FormControl(this.product.ProductUpc),
-      ProductDescription : new FormControl(this.product.ProductDescription)
-
+      ProductDescription: new FormControl(this.product.ProductDescription),
     });
   }
 
@@ -48,17 +48,15 @@ export class ProductEditComponent implements OnInit {
       ProductId: form.value.ProductId,
       ProductName: form.value.ProductName,
       ProductPrice: form.value.ProductPrice,
+      ProductCost: form.value.ProductCost,
       ProductQuantity: form.value.ProductQuantity,
       ProductCategory: form.value.ProductCategory,
       ProductUpc: form.value.ProductUpc,
       ProductDescription: form.value.ProductDescription,
-
-      
-     
-
     };
     this._productService.updateProduct(updateProduct).subscribe(d => {
       this._router.navigate(['/product']);
-    })
+    });
+    console.log(updateProduct);
   }
 }
