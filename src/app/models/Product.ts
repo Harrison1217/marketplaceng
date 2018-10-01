@@ -5,9 +5,6 @@ export interface Product {
     ProductPrice: number;
     ProductQuantity: number;
     ProductCost: number;
-    // ProductProfit?: number;
-    // ProductOnSale?: boolean;
     ProductCategory: string;
     ProductDescription: string;
-    RetailerId: number;
 }

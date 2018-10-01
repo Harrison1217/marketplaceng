@@ -1,5 +1,5 @@
-import { Customer } from '../models/Customer'
-import { Product } from '../models/Product'
+import { Customer } from '../models/Customer';
+import { Product } from '../models/Product';
 export interface Transaction {
     TransactionId?: number;
     ProductId?: number;
