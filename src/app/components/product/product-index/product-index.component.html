@@ -7,6 +7,13 @@
     <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
     <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
 
+    <ng-container matColumnDef="details">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize"> Details </mat-header-cell>
+      <mat-cell *matCellDef="let product" routerLink="/product/detail/{{product.ProductId}}">
+        <i class="material-icons">library_books</i>
+      </mat-cell>
+    </ng-container>
+
     <ng-container matColumnDef="ProductId">
       <mat-header-cell *matHeaderCellDef> Product # </mat-header-cell>
       <mat-cell *matCellDef="let product"> {{product.ProductId}} </mat-cell>
@@ -55,6 +62,6 @@
         <i class="material-icons" routerLink="/product/delete/{{product.ProductId}}">delete</i>
       </mat-cell>
     </ng-container>
-    
+
   </mat-table>
 </div>
