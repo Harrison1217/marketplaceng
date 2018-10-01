@@ -3,7 +3,8 @@
     background-image:url('../../../assets/faqs.jpg');
     margin:auto;
     opacity:.7;
-
+    background-size:cover;
+    height:100%;
   }
   .faq{
     text-align: left;
@@ -15,6 +16,7 @@
 
   }
   .info{
+    padding: 20px;
     text-align: left;
     border:1px solid black;
     margin-left: 100px;
@@ -22,5 +24,6 @@
     margin-top: 100px;
     background-color: transparent;
     border-radius: 25px;
+    
 
   }
