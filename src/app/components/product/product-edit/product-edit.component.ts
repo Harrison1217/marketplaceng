@@ -38,7 +38,9 @@ export class ProductEditComponent implements OnInit {
       ProductQuantity: new FormControl(this.product.ProductQuantity),
       ProductCategory: new FormControl(this.product.ProductCategory),
       ProductUpc: new FormControl(this.product.ProductUpc),
-      ProductDescription : new FormControl(this.product.ProductDescription)
+      ProductDescription : new FormControl(this.product.ProductDescription),
+      RetailerId: new FormControl(this.product.RetailerId),
+      ProductCost: new FormControl(this.product.ProductCost)
 
     });
   }
@@ -53,7 +55,7 @@ export class ProductEditComponent implements OnInit {
       ProductUpc: form.value.ProductUpc,
       ProductDescription: form.value.ProductDescription,
       ProductCost: form.value.ProductCost,
-      RetailerId: 15,
+      RetailerId: form.value.RetailerId,
       
 
     };
