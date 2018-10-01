@@ -36,6 +36,7 @@ import { RetailerEditComponent } from './components/retailer/retailer-edit/retai
 import { RetailerDeleteComponent } from './components/retailer/retailer-delete/retailer-delete.component';
 import { ProductEditComponent } from './components/product/product-edit/product-edit.component';
 import { FaqComponent } from './components/faq/faq.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
 
 const routes = [
   { path: 'register', component: RegistrationComponent },
@@ -77,6 +78,8 @@ const routes = [
       { path: 'detail/:id', component: TransactionDetailComponent }
     ]
   },
+  { path: 'IndexPage', component: HomePageComponent },
+
   { path: '**', component: RegistrationComponent }
 
 ];
@@ -103,7 +106,8 @@ const routes = [
     RetailerEditComponent,
     RetailerDeleteComponent,
     ProductEditComponent,
-    FaqComponent
+    FaqComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
