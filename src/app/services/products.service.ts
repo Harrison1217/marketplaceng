@@ -28,7 +28,7 @@ export class ProductsService {
   }
 
   updateProduct(product: Product){
-    return this._http.put(`${ApiUrl}/Product/${product.ProductId}`, product, { headers: this.getHeaders() });
+    return this._http.put(`${ApiUrl}/Product`, product, { headers: this.getHeaders() });
   }
 
   deleteProduct(id: number) {
