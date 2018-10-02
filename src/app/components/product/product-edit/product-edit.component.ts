@@ -15,16 +15,17 @@ export class ProductEditComponent implements OnInit {
 
   editProductForm: FormGroup;
   constructor(private _form: FormBuilder,
-    private _productService: ProductsService,
-    private _ar: ActivatedRoute,
-    private _router: Router) {
+              private _productService: ProductsService,
+              private _ar: ActivatedRoute,
+              private _router: Router) {
 
-    this._ar.paramMap.subscribe(p => {
-      this._productService.getProduct(p.get('id')).subscribe((singleProduct: Product) => {
-        this.product = singleProduct;
-        this.createForm();
+      this._ar.paramMap.subscribe(p => {
+        this._productService.getProduct(p.get('id')).subscribe((singleProduct: Product) => {
+          this.product = singleProduct;
+          this.createForm();
+        });
       });
-    });
+
   }
 
   ngOnInit() {
@@ -56,7 +57,6 @@ export class ProductEditComponent implements OnInit {
     };
     this._productService.updateProduct(updateProduct).subscribe(d => {
       this._router.navigate(['/product']);
-    });
-    console.log(updateProduct);
+    })
   }
 }

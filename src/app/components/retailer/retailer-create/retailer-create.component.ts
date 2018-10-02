@@ -32,8 +32,9 @@ export class RetailerCreateComponent implements OnInit {
 
 
   onSubmit() {
+    console.log(this.retailerForm.value);
     this._retailerService.createRetailers(this.retailerForm.value).subscribe(data => {
-      this._router.navigate(['/retailers']);
+      this._router.navigate(['/retailer']);
     });
   }
 }
