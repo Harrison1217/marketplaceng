@@ -38,6 +38,7 @@ import { ProductEditComponent } from './components/product/product-edit/product-
 import { FaqComponent } from './components/faq/faq.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
+import { TransactionCreateComponent } from './components/transaction/transaction-create/transaction-create.component';
 
 const routes = [
   { path: 'register', component: RegistrationComponent },
@@ -110,7 +111,8 @@ const routes = [
     ProductEditComponent,
     FaqComponent,
     HomePageComponent,
-    ProductDeleteComponent
+    ProductDeleteComponent,
+    TransactionCreateComponent
 
   ],
   imports: [
