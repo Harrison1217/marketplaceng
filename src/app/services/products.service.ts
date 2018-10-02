@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Product } from '../models/Product';
 
-const ApiUrl = 'http://localhost:51668/api';
+const ApiUrl = 'https://efamarketplacewebapi.azurewebsites.net/api';
 
 @Injectable({
   providedIn: 'root'

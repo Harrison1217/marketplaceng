@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { $ } from '../../../node_modules/protractor';
 import { Retailer } from '../models/Retailer';
 
-const ApiUrl = 'http://localhost:51668/api';
+const ApiUrl = 'https://efamarketplacewebapi.azurewebsites.net/api';
 
 @Injectable({
   providedIn: 'root'
