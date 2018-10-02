@@ -109,7 +109,7 @@ const routes = [
     RetailerDeleteComponent,
     ProductEditComponent,
     FaqComponent,
-    HomePageComponent
+    HomePageComponent,
     ProductDeleteComponent
 
   ],
