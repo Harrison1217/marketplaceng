@@ -2,7 +2,7 @@
 <hr>
 
 <div *ngIf="customer" id="border">
-  <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editCustomerForm">
+  <form #f="ngForm" (ngSubmit)="onSubmit()" [formGroup]="editCustomerForm">
     <div>
       <div hidden>
         <mat-form-field>
