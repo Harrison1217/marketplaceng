@@ -3,17 +3,20 @@
 }
 
 mat-toolbar {
-    background-color: darkblue;
-    border: 4px solid goldenrod;
-    color: goldenrod;
+    
+    color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: navy;
+    position: relative;
+    
+    
 }
+   
 
 .nav-btn {
     margin-right: 0.5em;
     border-radius: 10px;
-    border: 1px solid whitesmoke;
-    background-color: goldenrod;
-    color: darkblue;
+    background-color: transparent;
+    color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif
 }

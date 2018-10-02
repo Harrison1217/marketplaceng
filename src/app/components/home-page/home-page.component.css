@@ -1,11 +1,8 @@
 .image{
   height:40em; background-size:cover;
-  background-image:url('../../../assets/177532-2.jpg');
-  margin:auto;
-  background-size: auto;;
+  background-image:url('../../../assets/Motor.jpeg');
+  background-size: cover;;
   background-repeat:no-repeat;
-  margin-right:auto;
-  width:50%;
 }
 
 .background{
