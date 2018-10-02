@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 
 export class RegistrationComponent implements OnInit {
 
-  private _registerForm: FormGroup;
+  public _registerForm: FormGroup;
 
   selectedValue: string;
 
