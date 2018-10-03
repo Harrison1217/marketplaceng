@@ -10,5 +10,6 @@
   <button mat-raised-button class="nav-btn" routerLink="/login" *ngIf="!isLoggedIn">Login</button>
   <button mat-raised-button class="nav-btn" (click)="logout()" *ngIf="isLoggedIn">Logout</button>
   <span class="example-fill-remaining-space"></span>
-  <span>My Market Place </span>
+
+  <span routerLink="/IndexPage">My Market Place </span>
 </mat-toolbar>
