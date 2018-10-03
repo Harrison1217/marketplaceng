@@ -1,6 +1,6 @@
 <mat-toolbar>
   
-  <span *ngIf="isLoggedIn">Welcome{{username}}</span>
+  <span *ngIf="isLoggedIn">Welcome {{username}}</span>
   <!-- <button mat-raised-button class="nav-btn" routerLink="/IndexPage">IndexPage</button> -->
   <button mat-raised-button class="nav-btn" routerLink="/faq">FAQ</button>
   <button mat-raised-button class="nav-btn" routerLink="/customer" *ngIf="isAdmin">Customers</button>
@@ -11,5 +11,5 @@
   <button mat-raised-button class="nav-btn" (click)="logout()" *ngIf="isLoggedIn">Logout</button>
   <span class="example-fill-remaining-space"></span>
 
-  <span routerLink="/IndexPage">My Market Place </span>
+  <span routerLink="/IndexPage">My Marketplace </span>
 </mat-toolbar>
